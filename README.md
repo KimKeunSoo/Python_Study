@@ -201,7 +201,86 @@ c.hi()
 
 
 
-
-
 이런식으로 다른 패키지를 가져올 수 있음
+
+
+
+## List에서의 append vs extend
+
+list.append(x) : 리스트 끝에 x 한개를 넣음
+
+list.extend(itrable) : 리스트 끝에 iterable의 모든 항목을 넣음
+
+
+
+1. append
+
+```python
+x = ['A', 'B', 'C']
+y = ['D', 'E']
+x.append(y)
+print ('x : ', x)
+# x : ['A', 'B', 'C', ['D', 'E']]
+```
+
+
+
+2. extend
+
+```python
+x = ['A', 'B', 'C']
+y = ['D', 'E']
+x.extend(y)
+print ('x : ', x)
+# x : ['A', 'B', 'C', 'D', 'E']
+```
+
+
+
+
+
+## List의 2차원 배열 만들고, 모든 원소 뽑기
+
+
+
+2차원 배열 만들기
+
+```python
+# 동적
+array = [[0 for row in range(11)] for col in range(10)]
+#  row : 행 = 가로줄, col : 열 = 세로줄
+
+# 정적
+array = [[0] * 11] * 10
+```
+
+
+
+2차원 배열 원소 모두 뽑기
+
+```python
+for element in array: #만약 array의 열이 3이면
+    i, j, k = element[0], element[1], element[2] #이것도 가능하고
+	i, j, k = element # 이것도 가능함
+```
+
+
+
+import numpy
+
+```python
+import numpy
+numpy.zeros((5,5))
+
+#5*5배열의 0으로 된 2차원 배열 생성
+```
+
+
+
+## Slice 함수
+
+```python
+array = []
+slice = array[i-1:j]	#i번째부터 j번째까지 잘라옴
+```
 
