@@ -430,6 +430,36 @@ eval(expression )은 실행 가능한 문자열(1+2, 'hi' + 'a' 같은 것)을 �
 
 
 
+## find
+
+find( 찾을 문자, **찾기 시작할 위치**)
+
+find함수는 문자열 중에 특정 문자를 찾고 위치를 반환해준다. 없을 경우 -1을 반환한다.
+
+```python
+string = 'abcdefghijklmnop'
+s.find(a) >> 0
+s.find(b) >> 1
+s.find(z) >> -1
+```
+
+
+
+## startswith
+
+startswith(시작하는 문자, 시작 지점)
+
+startswith 함수는 문자열이 특정 문자로 시작하는지 여부를 알려준다
+
+```python
+string = 'abcdefghijklmnop'
+s.find(a) >> 0
+s.find(b) >> 1
+s.find(z) >> -1
+```
+
+
+
 ## filter
 
 filter 함수는 첫 번째 인수로 함수 이름을, 두 번째 인수로 그 함수에 차례로 들어갈 반복 가능한 자료형을 받는다. 그리고 두 번째 인수인 반복 가능한 자료형 요소가 첫 번째 인수인 함수에 입력되었을 때 반환 값이 참인 것만 묶어서(걸러 내서) 돌려준다.
@@ -878,11 +908,20 @@ type(object)은 입력값의 자료형이 무엇인지 알려 주는 함수이�
 
 
 
-## zip
+## zip - 시이발 이거 개애애애 유용함
 
 `zip(*iterable)`은 동일한 개수로 이루어진 자료형을 묶어 주는 역할을 하는 함수이다.
 
 > ※ 여기서 사용한 `*iterable`은 반복 가능(iterable)한 자료형 여러 개를 입력할 수 있다는 의미이다.
+
+
+
+```python
+for p1, p2 in zip (phoneBook, phoneBook[1:]):
+    # 이말은 즉슨 phoneBook배열에서 이중 for문을 하는데 두번째 for문에 index가 1부터 들어간단 말임. 또한, 당연히 그 값에 p1, p2에 넣겠다는말임. 시발 개쩜 파이썬.
+```
+
+
 
 
 
